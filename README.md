@@ -73,16 +73,16 @@
 ### snippet
 ### snippet
 
-# Meet and Greet (kimmy)
+# Development team (MEO\V3X)
 
 
   
-| Pic | Name   | Account |
-|-----|--------|---------|
-| <div align="center"><img src="sample.jpg" width="150"></div> | Bernardo, Xiamara    | link    |
-| <div align="center"><img src="sample.jpg" width="150"></div> | Carranceja, Mikyla  | link    |
-| <div align="center"><img src="sample.jpg" width="150"></div> | Gupilan, Shanlee Yvonne | link    |
-| <div align="center"><img src="sample.jpg" width="150"></div> | Mercado, Aaron Daniel   | link    |
+| Pic | Name   |Roles    | Account |
+|-----|--------|---------|---------|
+| <div align="center"><img src="Xiamara.jpg" width="150"></div> | Bernardo, Xiamara| Singer|   | link    |
+| <div align="center"><img src="sample.jpg" width="150"></div> |Carranceja, Mikyla | Drumer | link    |
+| <div align="center"><img src="shanlee.jpg" width="150"></div> |Gupilan, Shanlee Yvonne | Dancer| link    |
+| <div align="center"><img src="sample.jpg" width="150"></div> | Mercado, Aaron Daniel |Posa  | link    |
 
 
 
