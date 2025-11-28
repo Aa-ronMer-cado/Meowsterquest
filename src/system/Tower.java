@@ -1,18 +1,17 @@
 package system;
 
 import combat.BattleSystem;
-import core.Main;
 import entity.Enemy;
 import entity.player.Player;
 import util.TextUtil;
 
 public class Tower {
     public boolean battleLevel(Player player, int level, String title, String dialogue, Enemy enemy) {
-        Main.clearScreen();
+        TextUtil.clearScreen();
         TextUtil.printTitle("LEVEL " + level + " - " + title);
         TextUtil.typewriterPrintCentered(dialogue, 40);
         System.out.println();
-        Main.pause(1000);
+        TextUtil.pause(1000);
 
         BattleSystem battle = new BattleSystem(player, enemy);
         boolean victory = battle.startBattle();
@@ -23,27 +22,27 @@ public class Tower {
             TextUtil.typewriterPrint("+" + 100 + " Max HP");
             TextUtil.typewriterPrint("Weapon upgraded to Level " + (level + 1));
             TextUtil.typewriterPrint("Armor upgraded to Level " + (level + 1));
-            Main.pause(1000);
+            TextUtil.pause(1000);
             return true;
         } else {
-            TextUtil.typewriterPrint("\n💀 DEFEAT 💀");
-            Main.pause(5000);
-            System.out.println("Returning to checkpoint...");
-            Main.pause(5000);
+            TextUtil.typewriterPrint("\n DEFEAT ");
+            TextUtil.pause(5000);
+            TextUtil.typewriterPrint("Returning to checkpoint...");
+            TextUtil.pause(5000);
 
             // Retry the level - recreate enemy with same stats
             return battleLevel(player, level, title, dialogue,
-                                new Enemy(enemy.getName(), enemy.getLevel(), 
-                                        enemy.getMaxHp(), enemy.getDefense(), 
+                                new Enemy(enemy.getName(), enemy.getLevel(),
+                                        enemy.getMaxHp(), enemy.getDefense(),
                                         enemy.getAttacks(), enemy.getIdleAscii(),
                                         enemy.getColor()));
         }
     }
 
     public void rescuePrisoner(String name) {
-        Main.clearScreen();
+        TextUtil.clearScreen();
         TextUtil.typewriterPrintCentered(" --- You rescued " + name + "! --- ", 40, 157);
-        Main.pause(2000);
+        TextUtil.pause(2000);
     }
 
     public boolean playTowerLevels(Player player) {
