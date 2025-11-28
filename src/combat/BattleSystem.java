@@ -68,9 +68,7 @@ public class BattleSystem {
         if (choice == attacks.length + 1) {
             player.defend();
         } else {
-            // Show player ASCII art when attacking
             showPlayerAttackArt();
-            
             int damage = player.attack(choice - 1);
             if (damage > 0) {
                 if (radiantBurstDamage > 0) {
@@ -94,7 +92,7 @@ public class BattleSystem {
 
         if (player.getColor() == CatColor.BLACK && player.getTurnCount() % 3 == 0) {
             System.out.println("\n Extra turn granted by Shadow Speed! ");
-            Main.pause(1500);
+            Main.pause(500);
             if (enemy.isAlive()) {
                 playerTurn();
             }
@@ -103,9 +101,8 @@ public class BattleSystem {
 
     private void showPlayerAttackArt() {
         CatBreed breed = player.getBreed();
-    CatColor color = player.getColor();
+        CatColor color = player.getColor();
 
-        // Use the new attack art method
         String art = breed.ColoredAsciiAttackArt(color);
 
         System.out.println(art);

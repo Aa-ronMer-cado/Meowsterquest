@@ -12,8 +12,8 @@ public class Enemy {
     private int[] attacks;
     private int turnCount;
     private boolean canDefend;
-    private String idleAscii;   
-    private String color; 
+    private String idleAscii;
+    private String color;
 
     public Enemy(String name, int level, int maxHp, int defense, int[] attacks, String idleAscii, String color) {
     this.name = name;
@@ -22,7 +22,7 @@ public class Enemy {
     this.currentHp = maxHp;
     this.defense = defense;
     this.attacks = attacks;
-    this.idleAscii = idleAscii;        // NEW
+    this.idleAscii = idleAscii;
     this.color = color;
     this.turnCount = 0;
     this.canDefend = level >= 2;
@@ -40,24 +40,21 @@ public class Enemy {
     public int performAction() {
         turnCount++;
 
-    // Special attack
         if (level == 3 && turnCount % 3 == 0) {
-            System.out.println(idleAscii); // ATTACK ART
+            System.out.println(idleAscii);
             TextUtil.typewriterPrint(name + " unleashes a devastating special attack!");
             return 250;
         }
 
-    // Defensive stance
         if (canDefend && Main.random.nextInt(100) < 30) {
             TextUtil.typewriterPrint(name + " takes a defensive stance!");
             return 0;
         }
 
-    // Normal attack
         int attackIndex = Main.random.nextInt(attacks.length);
         int damage = attacks[attackIndex];
 
-        System.out.println(idleAscii); // *** SHOW ENEMY ATTACK ART HERE ***
+        System.out.println(idleAscii);
         TextUtil.typewriterPrint(name + " attacks with force!");
 
     return damage;
@@ -66,7 +63,7 @@ public class Enemy {
 
     public void displayStats() {
         System.out.println("\n--- " + name + " Stats ---");
-        System.out.println(idleAscii); // SHOW ASCII EVERY TIME ENEMY APPEARS
+        System.out.println(idleAscii);
         System.out.println("Level: " + level);
         System.out.println("HP: " + currentHp + "/" + maxHp);
         System.out.println("DEF: " + defense);

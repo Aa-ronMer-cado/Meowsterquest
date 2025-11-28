@@ -49,22 +49,23 @@ public class Tower {
     public boolean playTowerLevels(Player player) {
         // Level 1: Roach
         String roachArt = """
-,--.     .--.
-    /   \\. ./    \
-   /  /\\ / " \\ /\\  \
-  / _/  {~~v~~}  \\_ \
- /     {   |   }     \
-;   /\\{    |    }/\\   \
-| _/  {    |    }  \\_  :
-|     {    |    }      |
-|    /{    |    }\\     |
-|   / {    |    } \\    |
-|  /  {    |    }  \\   |
-|  \\  \\    |    /  /   |
-|   \\  \\   |   /  /    |
-\\    \\  \\  |  /  /     /
- \\   /   ~~~~~   \\    /
+     ,--.     .--.
+    /   \\. ./    \\
+   /  /\\\\ / " \\\\ /\\  \\
+  / _/  {~~v~~}  \\_ \\
+ /     {   |   }     \\
+;   /\\{    |    }/\\   ;
+| _/  {    |    }  \\_ |
+|     {    |    }     |
+|    /{    |    }\\    |
+|   / {    |    } \\   |
+|  /  {    |    }  \\  |
+|  \\  \\    |    /  /  |
+|   \\  \\   |   /  /   |
+ \\    \\  \\ |  /  /    /
+  \\   /   ~~~~~   \\   /
 """;
+
 
         if (!battleLevel(player, 1, "Roach's Lair ",
                         "The Tower rises. Roach awaits with venomous laughter.",

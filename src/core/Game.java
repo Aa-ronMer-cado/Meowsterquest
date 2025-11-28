@@ -25,7 +25,6 @@ public class Game {
         int choice = menuManager.showMainMenu();
 
         if (choice == 1) {
-            //SFX SOUND MEOWING
             Main.pause(1000);
             startGame();
         } else {
