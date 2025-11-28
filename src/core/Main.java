@@ -10,6 +10,7 @@ public class Main {
         Game game = new Game();
         game.start();
     }
+<<<<<<< HEAD
     public static int getIntInput(int min, int max) {
         while (true) {
             try {
@@ -23,6 +24,34 @@ public class Main {
             } catch (NumberFormatException e) {
                 System.out.print("Invalid input. Please enter a number: ");
             }
+=======
+
+    public static void clearScreen() {
+        System.out.println("\n");
+    }
+
+public static int getIntInput(int min, int max) {
+    while (true) {
+        try {
+            String input = scanner.nextLine().trim();
+            int value = Integer.parseInt(input);
+            if (value >= min && value <= max) {
+                return value;
+            } else {
+                System.out.print("Please enter a number between " + min + " and " + max + ": ");
+            }
+        } catch (NumberFormatException e) {
+            System.out.print("Invalid input. Please enter a number: ");
+        }
+    }
+}
+
+    public static void pause(int milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+>>>>>>> 1ce1d36a89a16d7b6b441f2b57dc63019383fe47
         }
     }
 }

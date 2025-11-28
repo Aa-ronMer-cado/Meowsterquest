@@ -5,6 +5,7 @@ import util.ColorUtil;
 
 public enum CatBreed {
     PERSIAN("Enchanted Book", "Mystic Robe", 150,
+<<<<<<< HEAD
     new Attack[]{
         new Attack("Fin Swipe", 90, 0),
         new Attack("Water Whip", 150, 30),
@@ -23,11 +24,32 @@ public enum CatBreed {
     /|  /\\
     ( ΦωΦ ) ﾉﾉ
     /  つ つ
+=======
+        new Attack[]{
+            new Attack("Fin Swipe", 90, 0),
+            new Attack("Water Whip", 150, 30),
+            new Attack("Tidal Slam", 220, 80)
+        },
+        """
+             /\\_____ /\\
+            /  o   o  \\
+           ( ==  ^  == )
+            )         (
+           (           )
+         ( (  )     (  ) )
+        (__ (__ )___(__)__)
+        """,
+        """
+        /\\  /\
+        ( ΦωΦ ) //
+        /  /\\/\\ 
+>>>>>>> 1ce1d36a89a16d7b6b441f2b57dc63019383fe47
     """
-    ),
+),
 
 
     RAGDOLL(
+<<<<<<< HEAD
     "Chakrams",
     "Hunter's Vest",
     120,
@@ -48,12 +70,35 @@ public enum CatBreed {
     /|  /\\
     ( ΦωΦ ) ﾉﾉ
     /  つ つ
+=======
+        "Chakrams",
+        "Hunter's Vest",
+        120,
+        new Attack[]{
+            new Attack("Scratch", 90, 5),
+            new Attack("Pounce", 130, 25),
+            new Attack("Roaring Swipe", 180, 60)
+        },
+        """
+             |\\---/|
+             | ,_, |
+              \\_`_/-..----.
+           ___/ `   ' ,""+ \\ 
+          (__...'   __\\    |`.___.';
+           (_,...'(_,.`__)/'..
+        """,
+        """
+        /\\  /\
+        ( ΦωΦ ) //
+        /  /\\/\\ 
+>>>>>>> 1ce1d36a89a16d7b6b441f2b57dc63019383fe47
     """
     ),
 
 
     PUSKAL("Shield", "Gauntlets of Valor", 100,
         new Attack[]{
+<<<<<<< HEAD
         new Attack("Heavy Hit", 80, 0),
         new Attack("Iron Paw", 120, 20),
         new Attack("Crushing Tail", 170, 50)
@@ -68,6 +113,22 @@ public enum CatBreed {
     /|  /\\
     ( ΦωΦ ) ﾉﾉ
     /  つ つ
+=======
+            new Attack("Heavy Hit", 80, 0),
+            new Attack("Iron Paw", 120, 20),
+            new Attack("Crushing Tail", 170, 50)
+        },
+        """
+            __._     _,-'""`-._
+            (,-.`._,'(       |\\`-/|
+                `-.-' \\ )-`( , o o)
+                    `-    \\`_`"'-
+        """,
+        """
+        /\\  /\
+        ( ΦωΦ ) //
+        /  /\\/\\ 
+>>>>>>> 1ce1d36a89a16d7b6b441f2b57dc63019383fe47
     """
     );
 
@@ -96,7 +157,7 @@ public enum CatBreed {
     public String getAsciiArtIdle() { return asciiArtIdle; }
     public String getAsciiArtAttack() { return asciiArtAttack; }
 
-    // ADD THIS METHOD - Get colored ASCII art based on cat color
+    //Colored ASCII art based on cat color
     public String ColoredAsciiArt(CatColor color) {
         return switch (color) {
             case ORANGE -> ColorUtil.orange(asciiArtIdle);

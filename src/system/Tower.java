@@ -18,7 +18,7 @@ public class Tower {
 
         if (victory) {
             player.levelUp(level);
-            TextUtil.typewriterPrint("\n✨ VICTORY! ✨");
+            TextUtil.typewriterPrint("\n VICTORY! ✨");
             TextUtil.typewriterPrint("+" + 100 + " Max HP");
             TextUtil.typewriterPrint("Weapon upgraded to Level " + (level + 1));
             TextUtil.typewriterPrint("Armor upgraded to Level " + (level + 1));
@@ -30,12 +30,11 @@ public class Tower {
             TextUtil.typewriterPrint("Returning to checkpoint...");
             TextUtil.pause(5000);
 
-            // Retry the level - recreate enemy with same stats
+            // Retry the level
             return battleLevel(player, level, title, dialogue,
                                 new Enemy(enemy.getName(), enemy.getLevel(),
                                         enemy.getMaxHp(), enemy.getDefense(),
-                                        enemy.getAttacks(), enemy.getIdleAscii(),
-                                        enemy.getColor()));
+                                        enemy.getAttacks(), enemy.getIdleAscii()));
         }
     }
 
@@ -46,7 +45,6 @@ public class Tower {
     }
 
     public boolean playTowerLevels(Player player) {
-        // Level 1: Roach
         String roachArt = """
      ,--.     .--.
     /   \\. ./    \\
@@ -68,7 +66,7 @@ public class Tower {
 
         if (!battleLevel(player, 1, "Roach's Lair ",
                         "The Tower rises. Roach awaits with venomous laughter.",
-                        new Enemy("Roach", 1, 200, 0, new int[]{90, 110, 140}, roachArt, "brown"))) {
+                        new Enemy("Roach", 1, 200, 0, new int[]{90, 110, 140}, roachArt))) {
             return false;
         }
         rescuePrisoner("Rowma");
@@ -90,7 +88,7 @@ public class Tower {
             """;
         if (!battleLevel(player, 2, "Miss Mice's Den ",
                         "The tunnels whisper danger. The Rat Queen stirs within.",
-                        new Enemy("Miss Mice", 2, 200, 30, new int[]{80, 120, 160}, miceArt, "grey"))) {
+                        new Enemy("Miss Mice", 2, 200, 30, new int[]{80, 120, 160}, miceArt))) {
             return false;
         }
         rescuePrisoner("Necko");
@@ -109,7 +107,7 @@ public class Tower {
             """;
         if (!battleLevel(player, 3, "Mordog's Fortress ",
                         "Beyond these gates lies Mordog, the tyrant of Asonia.",
-                        new Enemy("Mordog", 3, 200, 80, new int[]{100, 120, 150, 200}, mordogArt, "orange"))) {
+                        new Enemy("Mordog", 3, 200, 80, new int[]{100, 120, 150, 200}, mordogArt))) {
             return false;
         }
         rescuePrisoner("Cleo");

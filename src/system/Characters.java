@@ -77,11 +77,10 @@ public class Characters {
         System.out.print("\nChoose (1-3): ");
         Main.getIntInput(1, 3);
 
-        //FIX TextUtil
         System.out.println("\n" + "=".repeat(157));
         TextUtil.typewriterPrintCentered("With courage burning bright, " + playerName + " journeys to Asonia", 35);
         TextUtil.typewriterPrintCentered("to reclaim Pawshire's freedom.", 35);
         System.out.println("=".repeat(157));
-        Main.pause(2000);
+        TextUtil.pause(2000);
     }
 }
