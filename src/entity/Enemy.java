@@ -3,7 +3,7 @@ package entity;
 import core.Main;
 import util.TextUtil;
 
-public class Enemy {
+public class Enemy extends Entity {
     private String name;
     private int level;
     private int maxHp;
@@ -12,22 +12,16 @@ public class Enemy {
     private int[] attacks;
     private int turnCount;
     private boolean canDefend;
-    private String idleAscii;   
-    private String color; 
+    private String idleAscii;
+    private String color;
 
     public Enemy(String name, int level, int maxHp, int defense, int[] attacks, String idleAscii, String color) {
-    this.name = name;
-    this.level = level;
-    this.maxHp = maxHp;
-    this.currentHp = maxHp;
-    this.defense = defense;
-    this.attacks = attacks;
-    this.idleAscii = idleAscii;        
-    this.color = color;
-    this.turnCount = 0;
-    this.canDefend = level >= 2;
-}
-
+        super(name, maxHp, defense);
+        this.level = level;
+        this.attacks = attacks;
+        this.idleAscii = idleAscii;
+        this.color = color;
+    }
 
     public void takeDamage(int damage) {
         int actualDamage = Math.max(0, damage - defense);
@@ -61,16 +55,19 @@ public class Enemy {
         TextUtil.typewriterPrint(name + " attacks with force!");
 
     return damage;
-}
+    }
 
 
+    @Override
     public void displayStats() {
         System.out.println("\n--- " + name + " Stats ---");
-        System.out.println(idleAscii); // SHOW ASCII EVERY TIME ENEMY APPEARS
+        System.out.println(idleAscii);
         System.out.println("Level: " + level);
         System.out.println("HP: " + currentHp + "/" + maxHp);
         System.out.println("DEF: " + defense);
-}
+    }
+
+
 
 
     // Getters

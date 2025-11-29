@@ -4,8 +4,9 @@ import combat.Attack;
 import core.Main;
 import util.ColorUtil;
 import util.TextUtil;
+import entity.Entity;
 
-public class Player {
+public class Player extends Entity {
     private String name;
     private CatBreed breed;
     private CatColor color;
@@ -21,32 +22,24 @@ public class Player {
     private boolean reflectActive;
 
     public Player(String name, CatBreed breed, CatColor color) {
-        this.name = name;
+        super(name, 1500, 30);
         this.breed = breed;
         this.color = color;
-        this.maxHp = 1500;
-        this.currentHp = maxHp;
-        this.defense = 30;
         this.maxEnergy = breed.getMaxEnergy();
         this.energy = maxEnergy;
-        this.weaponLevel = 1;
-        this.armorLevel = 1;
-        this.turnCount = 0;
-        this.defendActive = false;
-        this.reflectActive = false;
-    }
+}
 
+
+    @Override
     public void displayStats() {
-    System.out.println("\n--- " + name + " Stats ---");
+        System.out.println("\n--- " + name + " Stats ---");
     System.out.println(breed.ColoredAsciiArt(color));
-    System.out.println("Breed: " + breed.name() + " (" + breed.getWeapon() + ")");
-    System.out.println("Color: " + color.ColoredName() + " (" + color.ColoredAbility() + ")");
-    System.out.println("HP: " + currentHp + "/" + maxHp);
-    System.out.println("DEF: " + getTotalDefense());
-    System.out.println("Energy: " + energy + "/" + maxEnergy);
-    System.out.println("Weapon Level: " + weaponLevel);
-    System.out.println("Armor Level: " + armorLevel);
-    }
+        System.out.println("Breed: " + breed.name());
+        System.out.println("Color: " + color.ColoredName());
+        System.out.println("HP: " + currentHp + "/" + maxHp);
+        System.out.println("DEF: " + getTotalDefense());
+}
+
 
     public void showPlayerAttackArt() {
     String attackArt = breed.getAsciiArtAttack();
