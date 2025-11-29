@@ -10,11 +10,7 @@ public class Menu {
         TextUtil.printTitle("MEOWSTERQUEST: THE RISE OF PAWSHIRE");
 
         System.out.println();
-<<<<<<< HEAD
-        System.out.println("MAIN MENU");
-=======
         System.out.println("MAIN MENU"); 
->>>>>>> 1ce1d36a89a16d7b6b441f2b57dc63019383fe47
         System.out.println("1. Play");
         System.out.println("2. Exit");
         System.out.print("\nChoose an option: ");
@@ -53,19 +49,12 @@ public class Menu {
         TextUtil.pause(1000);
 
         System.out.println();
-<<<<<<< HEAD
+
         TextUtil.typewriterPrint("[Prisoner]: \"Because of you, our kin are free at last!\"", 40); //PUT DELAY
         TextUtil.pause(1000);
 
         TextUtil.typewriterPrint("[Prisoner]: \"Pawshire will never forget your courage and sacrifice.\"", 40); //PUT DELAY
         TextUtil.pause(700);
-=======
-        TextUtil.typewriterPrint("[Prisoner]: \"Because of you, our kin are free at last!\"", 40); 
-        Main.pause(1000);
-
-        TextUtil.typewriterPrint("[Prisoner]: \"Pawshire will never forget your courage and sacrifice.\"", 40); 
-        Main.pause(1500);
->>>>>>> 1ce1d36a89a16d7b6b441f2b57dc63019383fe47
 
         System.out.println();
         TextUtil.typewriterPrintCentered(" Prisoners reunite! ", 40);
@@ -73,15 +62,10 @@ public class Menu {
         TextUtil.pause(2000);
     }
 
-<<<<<<< HEAD
-    public void showEndScreen() { //FIX TEXTUTIL PRINT
-        TextUtil.clearScreen();
-        TextUtil.printTitle("----- GAME COMPLETE ------");
-=======
     public void showEndScreen() { 
         Main.clearScreen();
-        TextUtil.printMiddle("----- GAME COMPLETE ------", 157);
->>>>>>> 1ce1d36a89a16d7b6b441f2b57dc63019383fe47
+        TextUtil.printCentered("----- GAME COMPLETE ------");
+
 
         System.out.print("Rate your experience (1-5): ");
         Main.getIntInput(1, 5);
