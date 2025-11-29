@@ -2,6 +2,7 @@ package entity;
 
 import util.TextUtil;
 
+//ROLE?
 public class NPC {
     private String name;
     private String role;
