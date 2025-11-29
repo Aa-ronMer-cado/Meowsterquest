@@ -22,7 +22,7 @@
 - Gain Hp and Points
 - Win the Battle(eme)
 
-# **Game Structure** ##
+# **Game Structure** 
 ```
 📂 src/
 └── 📂 combat/
@@ -43,32 +43,32 @@
      └── 🎨 ColorUtil.java
      └── 💬TextUtil.java
 ```
-<ul>
-  <li><b>Attack.java</b> – Defines attack actions with damage and energy cost attributes.</li>
-  <li><b>BattleSystem.java</b> – Manages turn-based combat between player and enemy, including special abilities and battle flow.</li>
-  <li><b>Game.java</b> – Oversees game progression, including menu navigation, character creation, and victory sequence.</li>
-  <li><b>Main.java</b> – Entry point of the program, initializes the game and handles user input.</li>
-  <li><b>Enemy.java</b> – Represents enemy characters with stats, ASCII art, and combat behavior.</li>
-  <li><b>NPC.java</b> – Models non-playable characters with names, roles, and dialogue interactions.</li>
-  <li><b>Character.java</b> – Handles character creation, breed and color selection, and NPC encounter scenes.</li>
-  <li><b>Menu.java</b> – Displays game menus, introduction, victory, and end screens with interactive options.</li>
-  <li><b>Tower.java</b> – Controls level progression, enemy battles, prisoner rescues, and retry logic.</li>
-  <li><b>ColorUtil.java</b> – Provides color formatting utilities for text output based on cat color traits.</li>
-  <li><b>TextUtil.java</b> – Offers text display utilities like typewriter effects, centered printing, and screen clearing.</li>
-</ul>
+- **Attack.java** – Defines attack actions with damage and energy cost attributes.
+- **BattleSystem.java** – Manages turn-based combat between player and enemy, including special abilities and battle flow.
+- **Game.java** – Oversees game progression, including menu navigation, character creation, and victory sequence.
+- **Main.java** – Entry point of the program, initializes the game and handles user input.
+- **Enemy.java** – Represents enemy characters with stats, ASCII art, and combat behavior.
+- **NPC.java** – Models non-playable characters with names, roles, and dialogue interactions.
+- **Character.java** – Handles character creation, breed and color selection, and NPC encounter scenes.
+- **Menu.java** – Displays game menus, introduction, victory, and end screens with interactive options.
+- **Tower.java** – Controls level progression, enemy battles, prisoner rescues, and retry logic.
+- **ColorUtil.java** – Provides color formatting utilities for text output based on cat color traits.
+- **TextUtil.java** – Offers text display utilities like typewriter effects, centered printing, and screen clearing.
 
-## How to Run the Game
-<b>1. Navigate to the project root</b>
-#### Open your terminal and go to the root directory of your project (where the `src` folder or packages like `core`, `combat`, etc. are located).
+### How to Run the Game
+
+**1. Navigate to the project root**
+- #### Open your terminal and go to the root directory of your project (where the `src` folder or packages like `core`, `combat`, etc. are located).
 ```
 cd path/to/MEOWSTERQUEST
 ```
-<b>2. Compile the Java files</b>
+** 2. Compile the Java files **
 #### Assuming your source files are inside a `src` folder and follow a package structure (`core`, `combat`, etc.), compile all `.java` files:
+
 ```
 javac src/**/*.java
 ```
-<b>3. Run the main class</b>
+** 3. Run the main class ** 
 #### Your entry point is `core.Main`, so run it using:
 ```
 java core.Main
@@ -78,19 +78,19 @@ java core.Main
 java -cp src core.Main
 ```
 
-## **What can YOU do (Features)**
+### **What can YOU do (Features)**
 1. **Add info.** Enter the name of your character
-### `Enter your cat's name:`
+#### `Enter your cat's name:`
 2. **Select Character.** Can choose the breed and color of the cat by selecting the designated number.
 
-### `=== Choose Your Cat Breed (Class) ===`
+#### `=== Choose Your Cat Breed (Class) ===`
 
 <p float="left">
   <img src="resources/Persian.png" width="200" height="200" style="margin-right: 10px;"/>
   <img src="resources/Ragdoll.png" width="200" height="200" style="margin-right: 10px;"/>
   <img src="resources/Puskal.png" width="200" height="200" style="margin-right: 10px;"/>
 
-### `=== Choose Your Cat Color (Elemental Trait) ===`
+#### `=== Choose Your Cat Color (Elemental Trait) ===`
 </p>
 <p align="center">
   <img src="resources/CatColorSample.png" alt="naur it should hav meowmeow" width="400" height="250">
