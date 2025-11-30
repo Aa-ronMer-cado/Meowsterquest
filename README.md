@@ -1,3 +1,4 @@
+
 <h1 align="center">
   /ᐠ > ˕ <マ MeowsterQuest ₊˚⊹♡
 </h1>
@@ -26,15 +27,16 @@
 ```
 📂 src/
 └── 📂 combat/
-    ├── ⚔️ Attack.java          
-    ├── 🛡️ BattleSystem.java
+    └──⚔️ Attack.java          
+    └── 🛡️ BattleSystem.java
 └── 📂 core/
      └── 👾 Game.java
      └── 📍 Main.java
 └── 📂 entity/
     └── 📂 player/
-        └── 👿 Enemy.java
-        └── 👿 Enemy.java
+    |   └── 🧬 CatBreed.java
+    |   └── 🌈 CatColor.java
+    |   └── 🎮 Player.java
     └── 👿 Enemy.java
     └── 🔊 NPC.java
 └── 📂 system/
@@ -45,17 +47,37 @@
      └── 🎨 ColorUtil.java
      └── 💬TextUtil.java
 ```
+### combat/ - 
 - **Attack.java** – Defines attack actions with damage and energy cost attributes.
 - **BattleSystem.java** – Manages turn-based combat between player and enemy, including special abilities and battle flow.
+
+### core/
 - **Game.java** – Oversees game progression, including menu navigation, character creation, and victory sequence.
 - **Main.java** – Entry point of the program, initializes the game and handles user input.
+
+### entity/
+
+  &nbsp;&nbsp;&nbsp;&nbsp; player/
+  - **CatBreed.java** – Defines cat breeds (Persian, Ragdoll, Puskal) with weapons, armor, energy, attacks, and ASCII art.
+- **CatColor.java** – Defines elemental traits (Orange, Black, White, Tilapia) with unique abilities and colored text.
+- **Player.java** – Represents the player character with stats, attacks, defense, energy, special abilities, and progression.
+
+### entity/
 - **Enemy.java** – Represents enemy characters with stats, ASCII art, and combat behavior.
 - **NPC.java** – Models non-playable characters with names, roles, and dialogue interactions.
+
+### system/
 - **Character.java** – Handles character creation, breed and color selection, and NPC encounter scenes.
 - **Menu.java** – Displays game menus, introduction, victory, and end screens with interactive options.
 - **Tower.java** – Controls level progression, enemy battles, prisoner rescues, and retry logic.
+
+### util/
 - **ColorUtil.java** – Provides color formatting utilities for text output based on cat color traits.
 - **TextUtil.java** – Offers text display utilities like typewriter effects, centered printing, and screen clearing.
+
+<p align="center">
+  <img src="resources/Qmark.gif" alt=" ??? " width="1000" height="200">
+</p>
 
 ### How to Run the Game
 
@@ -77,7 +99,7 @@ java core.Main
 ```
 #### Make sure you're in the same directory where the compiled `.class` files are located, or set the classpath explicitly:
 ```
-java -cp src core.Main
+java -cp src core.Main 
 ```
 
 ### **What can YOU do (Features)**
@@ -129,14 +151,11 @@ java -cp src core.Main
 
 
   
-| Pic | Name   |Roles    | Account |
+|     | Name   |Roles    | Account |
 |-----|--------|---------|---------|
-| <div align="center"><img src="resources/Xiamara.jpg" width="150"></div> | Bernardo, Xiamara| Singer|  link    |
-| <div align="center"><img src="resources/miky.jpg" width="150"></div> |Carranceja, Mikyla | Drumer | link    |
-| <div align="center"><img src="resources/shanlee.jpg" width="150"></div> |Gupilan, Shanlee Yvonne | Dancer| link    |
-| <div align="center"><img src="resources/aaron.jpg" width="150"></div> | Mercado, Aaron Daniel |Posa  | link    |
+| <div align="center"><img src="resources/Xiamara.png" width="150"></div> | Bernardo, Xiamara| Narrative Designer|[![GitHub]( https://img.shields.io/badge/-GitHub-722F37?logo=github&style=flat-square)](https://github.com/Xiamara23)|
+| <div align="center"><img src="resources/miky.jpg" width="150"></div> |Carranceja, Mikyla | Game Designer | [![GitHub](https://img.shields.io/badge/-GitHub-6C3BAA?logo=github&style=flat-square)](https://github.com/kykylim) |
+| <div align="center"><img src="resources/shanlee.jpg" width="150"></div> |Gupilan, Shanlee Yvonne | Quality Assurance| [![GitHub](https://img.shields.io/badge/-GitHub-2E6F40?logo=github&style=flat-square)](https://github.com/Shanleegupilan8)|
+| <div align="center"><img src="resources/aaron.jpg" width="150"></div> | Mercado, Aaron Daniel |Game Programmer  |[![GitHub](https://img.shields.io/badge/-GitHub-48CAE4?logo=github&style=flat-square)](https://github.com/Aa-ronMer-cado) |
 
-
-
-
-
+ 
