@@ -36,7 +36,7 @@ public class Enemy {
         currentHp -= actualDamage;
         if (currentHp < 0) currentHp = 0;
 
-        TextUtil.typewriterPrint(name + " takes " + actualDamage + " damage! HP: " + currentHp + "/" + maxHp, music);
+        TextUtil.typewriterBlip(name + " takes " + actualDamage + " damage! HP: " + currentHp + "/" + maxHp, 100, music);
     }
 
     public int performAction() {
@@ -45,13 +45,13 @@ public class Enemy {
     // Special attack
         if (level == 3 && turnCount % 3 == 0) {
             System.out.println(idleAscii);
-            TextUtil.typewriterPrint(name + " unleashes a devastating special attack!", music);
+            TextUtil.typewriterBlip(name + " unleashes a devastating special attack!", 100, music);
             return 250;
         }
 
     // Defensive
         if (canDefend && Main.random.nextInt(100) < 30) {
-            TextUtil.typewriterPrint(name + " takes a defensive stance!", music);
+            TextUtil.typewriterBlip(name + " takes a defensive stance!", 100,music);
             return 0;
         }
 
@@ -60,7 +60,7 @@ public class Enemy {
         int damage = attacks[attackIndex];
 
         System.out.println(idleAscii);
-        TextUtil.typewriterPrint(name + " attacks with force!", music);
+        TextUtil.typewriterBlip(name + " attacks with force!", 100, music);
 
     return damage;
 }

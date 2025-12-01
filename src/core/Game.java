@@ -27,7 +27,7 @@ public class Game {
 
     private void mainMenu() {
         music.playBGM("src/resource/BGMforWholeGame.wav");
-        TextUtil.typewriterPrintCentered("LOADING GAME.......", 300, 160, music);
+        TextUtil.typewriterBlipCentered("LOADING GAME.......", 300, 160, music);
         TextUtil.pause(700);
 
         int choice = menuManager.showMainMenu();
@@ -43,9 +43,9 @@ public class Game {
 
     private void startGame() {
         Main.clearScreen();
-        menuManager.displayIntroduction();
+        //menuManager.displayIntroduction();
         player = characterManager.createCharacter();
-        characterManager.showNPCEncounter(player.getName());
+        //characterManager.showNPCEncounter(player.getName());
         music.stopBGM();
         boolean victory = towerManager.playTowerLevels(player);
         music.stopBGM();

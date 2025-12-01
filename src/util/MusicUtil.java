@@ -80,25 +80,4 @@ public class MusicUtil {
         }
     }
 
-    /* ---------------------- UTILITY METHODS ---------------------- */
-
-    // Method used in Tower.java - prints with typing sound
-    public void printWithTypingSFX(String title, int level, String dialogue) {
-        String text = "Level " + level + " completed: " + title;
-        String typingSFXPath = "src/resource/TypingSound.wav";
-
-        startTypingSFX(typingSFXPath);
-
-        for (char c : text.toCharArray()) {
-            System.out.print(c);
-            try {
-                Thread.sleep(40);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        }
-
-        stopTypingSFX();
-        System.out.println();
-        }
-    }
+}

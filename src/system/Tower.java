@@ -14,29 +14,30 @@ public class Tower {
         Main.clearScreen();
         music.playBGM("src/resource/TowerMusic.wav");
         TextUtil.printTitle("LEVEL " + level + " - " + title);
-        TextUtil.typewriterPrintCentered(dialogue, 40);
+        TextUtil.typewriterBlipCentered(dialogue, 40, music);
         System.out.println();
-        TextUtil.pause(1000);
+        TextUtil.pause(2000);
 
         BattleSystem battle = new BattleSystem(player, enemy);
         boolean victory = battle.startBattle();
 
         if (victory) {
             player.levelUp(level);
+            music.stopBGM();
             music.playSFX("src/resource/VictorySound.wav");
-            music.printWithTypingSFX(title, level, dialogue);
-            TextUtil.typewriterPrint("\n✨ VICTORY! ✨", music);
-            TextUtil.typewriterPrint("+" + 100 + " Max HP", music);
-            TextUtil.typewriterPrint("Weapon upgraded to Level " + (level + 1), music);
-            TextUtil.typewriterPrint("Armor upgraded to Level " + (level + 1),music);
+            TextUtil.typewriterBlipBGM("\n--- VICTORY! ---", 100, music);
+            TextUtil.typewriterBlipBGM("+" + 100 + " Max HP",100,  music);
+            TextUtil.typewriterBlipBGM("Weapon upgraded to Level " + (level + 1), 100,music);
+            TextUtil.typewriterBlipBGM("Armor upgraded to Level " + (level + 1),100, music);
             TextUtil.pause(1000);
+            music.playBGM("src/resource/TowerMusic.wav");
             return true;
         } else {
             music.stopBGM();
             music.playSFX("src/resource/Defeat.wav");
-            TextUtil.typewriterPrint("\n------ DEFEAT ------",500, music);
+            TextUtil.typewriterBlipBGM("\n------ DEFEAT ------",500, music);
             TextUtil.pause(3000);
-            TextUtil.typewriterPrint("Returning to checkpoint...........",500, music);
+            TextUtil.typewriterBlipBGM("Returning to checkpoint...........",500, music);
             TextUtil.pause(2000);
 
             // Retry the level
@@ -51,7 +52,7 @@ public class Tower {
 
     public void rescuePrisoner(String name) {
         Main.clearScreen();
-        TextUtil.typewriterPrintCentered(" --- You rescued " + name + "! --- ", 40, 157);
+        TextUtil.typewriterBlipCentered(" --- You rescued " + name + "! --- ", 100, music);
         TextUtil.pause(2000);
     }
 

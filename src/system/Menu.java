@@ -24,7 +24,6 @@ public class Menu {
 
     public void displayIntroduction() {
         TextUtil.clearScreen();
-        TextUtil.printTitle("MEOWSTERQUEST: THE RISE OF PAWSHIRE");
         TextUtil.printTitle("INTRODUCTION");
 
         String[] intro = {
@@ -35,7 +34,7 @@ public class Menu {
         };
 
         for (String line : intro) {
-            TextUtil.typewriterPrintCentered(line, 40);
+            TextUtil.typewriterPrintCentered(line, 100, 160, music);
             TextUtil.pause(1000);
         }
         System.out.println();
