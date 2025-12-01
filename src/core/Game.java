@@ -4,19 +4,29 @@ import entity.player.Player;
 import system.Characters;
 import system.Menu;
 import system.Tower;
-import util.TextUtil;
 
 public class Game {
     private Player player;
-    private final Menu menuManager = new Menu();
-    private final Characters characterManager = new Characters();
-    private final Tower towerManager = new Tower();
+    private Menu menuManager;
+    private Characters characterManager;
+    private Tower towerManager;
+
+    public Game() {
+        this.menuManager = new Menu();
+        this.characterManager = new Characters();
+        this.towerManager = new Tower();
+    }
 
     public void start() {
+        Main.clearScreen();
         mainMenu();
     }
 
     private void mainMenu() {
+        music.playBGM("src/resource/BGMforWholeGame.wav");
+        TextUtil.typewriterPrintCentered("LOADING GAME.......", 300);
+        TextUtil.pause(700);
+
         int choice = menuManager.showMainMenu();
 
         if (choice == 1) {
@@ -28,15 +38,16 @@ public class Game {
     }
 
     private void startGame() {
-        TextUtil.clearScreen();
+        Main.clearScreen();
         menuManager.displayIntroduction();
         player = characterManager.createCharacter();
-
         characterManager.showNPCEncounter(player.getName());
-
         boolean victory = towerManager.playTowerLevels(player);
+        music.stopBGM();
 
-        if (victory) victorySequence();
+        if (victory) {
+            victorySequence();
+        }
     }
 
     private void victorySequence() {
@@ -46,6 +57,7 @@ public class Game {
 
     private void endScreen() {
         menuManager.showEndScreen();
+        music.stopBGM();
         mainMenu();
     }
 }
