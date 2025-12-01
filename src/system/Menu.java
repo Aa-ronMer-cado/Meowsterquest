@@ -7,9 +7,10 @@ import util.MusicUtil;
 public class Menu {
 
     public MusicUtil music = new MusicUtil();
+    
     public int showMainMenu() {
         Main.clearScreen();
-        //music.playBGM("resource/BGMforWholeGame.wav");
+        //music.playBGM("src/resource/BGMforWholeGame.wav");
         TextUtil.printTitle("MEOWSTERQUEST: THE RISE OF PAWSHIRE");
 
         System.out.println();
@@ -35,7 +36,7 @@ public class Menu {
 
         for (String line : intro) {
             TextUtil.typewriterPrintCentered(line, 40);
-            TextUtil.pause(10);
+            TextUtil.pause(1000);
         }
         System.out.println();
 
@@ -56,7 +57,7 @@ public class Menu {
               __                            _||_   |
      ____--`~    '--~~__            __ ----~    ~`---,              ___
 -~--~                   ~---__ ,--~'                  ~~----_____-~'   `~----~~
-            """,100100);
+            """, 100);
     }
 
     public void showVictorySequence(String playerName) {
@@ -73,14 +74,14 @@ public class Menu {
 
         System.out.println();
 
-        TextUtil.typewriterPrint("[Prisoner]: \"Because of you, our kin are free at last!\"", 40); //PUT DELAY
+        TextUtil.typewriterPrint("[Prisoner]: \"Because of you, our kin are free at last!\"", 40);
         TextUtil.pause(1000);
 
-        TextUtil.typewriterPrint("[Prisoner]: \"Pawshire will never forget your courage and sacrifice.\"", 40); //PUT DELAY
+        TextUtil.typewriterPrint("[Prisoner]: \"Pawshire will never forget your courage and sacrifice.\"", 40);
         TextUtil.pause(700);
 
         System.out.println();
-        TextUtil.typewriterPrintCentered(" Prisoners reunite! ", 40);
+        TextUtil.typewriterPrintCentered("Prisoners reunite!", 40);
         TextUtil.typewriterPrintCentered("Rowma, Necko, and Cleo are safe!", 35);
         TextUtil.pause(2000);
     }
@@ -89,7 +90,6 @@ public class Menu {
         Main.clearScreen();
         TextUtil.printCentered("----- GAME COMPLETE ------");
 
-
         System.out.print("Rate your experience (1-5): ");
         Main.getIntInput(1, 5);
 
@@ -97,10 +97,10 @@ public class Menu {
         TextUtil.printTitle("THANK YOU FOR PLAYING!");
 
         TextUtil.typewriterPrintCentered("Your courage has guided Pawshire to freedom.", 40, 157);
-        TextUtil.typewriterPrintCentered("May your journey always be filled with", 40,157);
+        TextUtil.typewriterPrintCentered("May your journey always be filled with", 40, 157);
         TextUtil.typewriterPrintCentered("bravery, wonder, and kindness.", 40, 157);
 
-        TextUtil.typewriterPrint("\n=== CREDITS ===", 100); //FIX CREDITS
+        TextUtil.typewriterPrint("\n=== CREDITS ===", 100);
         TextUtil.typewriterPrint("MEO\\V3X", 100);
         TextUtil.typewriterPrint("Programming: Java OOP PROGRAMMING", 100);
         TextUtil.typewriterPrint("Thanks for playing!", 100);

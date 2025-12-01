@@ -8,6 +8,7 @@ import entity.player.Player;
 import util.TextUtil;
 
 public class Characters {
+    
     public Player createCharacter() {
         TextUtil.printTitle("CHARACTER CREATION");
 
@@ -45,11 +46,10 @@ public class Characters {
 
         Player newPlayer = new Player(name, breed, color);
 
-        //FIX delay and print center
         TextUtil.clearScreen();
         System.out.println("\n" + "=".repeat(157));
-        TextUtil.typewriterPrintCentered("The " + color.ColoredName() + " " + breed.name() +  " named " + name + 
-        " is ready for battle! It leaps into action, claws flashing and eyes burning with courage.", 30);
+        TextUtil.typewriterPrintCentered("The " + color.ColoredName() + " " + breed.name() + 
+            " named " + name + " is ready for battle! It leaps into action, claws flashing and eyes burning with courage.", 30);
         TextUtil.typewriterPrintCentered("The fate of Pawshire rests on its paws!", 30);
         System.out.println("=".repeat(157));
         newPlayer.displayStats();
