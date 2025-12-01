@@ -42,7 +42,7 @@ public class BattleSystem {
 
     private void playerTurn() {
         TextUtil.clearScreen();
-        TextUtil.typewriterPrint("---YOUR TURN---", music);
+        TextUtil.typewriterPrint("---YOUR TURN---");
 
         player.displayStats();
         System.out.println();
@@ -95,7 +95,7 @@ public class BattleSystem {
 
     private void enemyTurn() {
         TextUtil.clearScreen();
-        TextUtil.typewriterPrint("---ENEMY TURN---", music);
+        TextUtil.typewriterPrint("---ENEMY TURN---");
 
         int dmg = enemy.performAction();
         if (dmg > 0) player.takeDamage(dmg);

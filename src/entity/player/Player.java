@@ -73,12 +73,12 @@ public class Player {
 
         if (defendActive) {
             actualDamage /= 2;
-            TextUtil.typewriterPrint(name + "'s defense halves the damage!", music);
+            TextUtil.typewriterPrint(name + "'s defense halves the damage!");
             defendActive = false;
         }
 
         if (reflectActive) {
-            TextUtil.typewriterPrint(name + "'s Reflect Shield deflects all damage!", music);
+            TextUtil.typewriterPrint(name + "'s Reflect Shield deflects all damage!");
             actualDamage = 0;
             reflectActive = false;
         }
@@ -86,7 +86,7 @@ public class Player {
         currentHp -= actualDamage;
         if (currentHp < 0) currentHp = 0;
 
-        TextUtil.typewriterPrint(name + " takes " + actualDamage + " damage! HP: " + currentHp + "/" + maxHp, music);
+        TextUtil.typewriterPrint(name + " takes " + actualDamage + " damage! HP: " + currentHp + "/" + maxHp);
     }
 
     public int attack(int attackIndex) {
@@ -98,7 +98,7 @@ public class Player {
         Attack attack = attacks[attackIndex];
 
         if (energy < attack.getEnergyCost()) {
-        TextUtil.typewriterPrint("Not enough energy!", music);
+        TextUtil.typewriterPrint("Not enough energy!");
             return 0;
         }
 
@@ -107,13 +107,13 @@ public class Player {
         double weaponMultiplier = 1.0 + (weaponLevel * 0.5);
         int damage = (int) (attack.getDamage() * weaponMultiplier);
 
-        TextUtil.typewriterPrint(name + " uses " + attack.getName() + "!",music);
+        TextUtil.typewriterPrint(name + " uses " + attack.getName() + "!");
         return damage;
     }
 
     public void defend() {
         defendActive = true;
-        TextUtil.typewriterPrint(name + " takes a defensive stance!", 40, music);
+        TextUtil.typewriterPrint(name + " takes a defensive stance!");
     }
 
     public void regenerateEnergy() {
@@ -129,28 +129,28 @@ public class Player {
     }
 
     private void triggerSpecialAbility() {
-        TextUtil.typewriterPrint("\n✨ " + color.getAbility() + " activates! ✨", music);
+        TextUtil.typewriterPrint("\n✨ " + color.getAbility() + " activates! ✨");
 
         switch (color) {
             case ORANGE:
-                TextUtil.typewriterPrint("Radiant energy explodes! (300 damage will be dealt)", music);
+                TextUtil.typewriterPrint("Radiant energy explodes! (300 damage will be dealt)");
                 break;
             case BLACK:
-                TextUtil.typewriterPrint("Shadow Speed grants an extra turn!", music);
+                TextUtil.typewriterPrint("Shadow Speed grants an extra turn!");
                 break;
             case WHITE:
                 heal(200);
                 break;
             case TILAPIA:
                 reflectActive = true;
-                TextUtil.typewriterPrint("Reflect Shield activated for this turn!", music);
+                TextUtil.typewriterPrint("Reflect Shield activated for this turn!");
                 break;
         }
     }
 
     public void heal(int amount) {
         currentHp = Math.min(maxHp, currentHp + amount);
-        TextUtil.typewriterPrint(name + " restores " + amount + " HP! HP: " + currentHp + "/" + maxHp, music);
+        TextUtil.typewriterPrint(name + " restores " + amount + " HP! HP: " + currentHp + "/" + maxHp);
     }
 
     public void levelUp(int level) {

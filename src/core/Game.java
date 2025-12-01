@@ -27,7 +27,7 @@ public class Game {
 
     private void mainMenu() {
         music.playBGM("src/resource/BGMforWholeGame.wav");
-        TextUtil.typewriterPrintCentered("LOADING GAME.......", 300, 160, music);
+        TextUtil.printCentered("LOADING GAME.......");
         TextUtil.pause(700);
 
         int choice = menuManager.showMainMenu();
