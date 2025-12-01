@@ -91,13 +91,14 @@
 ```
 cd path/to/MEOWSTERQUEST
 ```
-** 2. Compile the Java files **
+**2. Compile the Java files**
 #### Assuming your source files are inside a `src` folder and follow a package structure (`core`, `combat`, etc.), compile all `.java` files:
 
 ```
 javac src/**/*.java
 ```
-** 3. Run the main class ** 
+**3. Run the main class** 
+
 #### Your entry point is `core.Main`, so run it using:
 ```
 java core.Main
@@ -149,16 +150,16 @@ java -cp src core.Main
 
 # **⋆🐾° ┊Game Play (Example Output)**
 ## baguhin, ung may tower nalang and ung panimula na kwento
-![alt text](image.png) 
+<img src="resources/image.png">
 
 ## 🎨🖌️ Character Creation
-![alt text](image-1.png)
+<img src="resources/image-1.png">
 
 ## 📊 Status of your character
-![alt text](image-2.png)
+<img src="resources/image-2.png">
 
 ## 🫀⚔️ 💀 Battle between LIFE and DEATH
-![alt text](image-3.png)
+<img src="resources/image-3.png">
 
 
 # **⋆🐾° ┊Development team (MEO\V3X)**
