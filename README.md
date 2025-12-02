@@ -43,12 +43,14 @@
     └── 🔊 NPC.java
         └── 👿 Enemy.java
         └── 🔊 NPC.java
+└── 📂 resources/
 └── 📂 system/
      └── 🐱 Characters.java
      └── 📋 Menu.java
      └── 🏰 Tower.java
 └── 📂 util/
      └── 🎨 ColorUtil.java
+     └── 🎶 MusicUtil.java
      └── 💬TextUtil.java
 ```
 ### 💥 combat/ 
@@ -70,6 +72,7 @@
 - **`Enemy.java`** – Represents enemy characters with stats, ASCII art, and combat behavior.
 - **`NPC.java`** – Models non-playable characters with names, roles, and dialogue interactions.
 
+### ⚙️ resources/
 ### ⚙️ system/
 - **`Character.java`** – Handles character creation, breed and color selection, and NPC encounter scenes.
 - **`Menu.java`** – Displays game menus, introduction, victory, and end screens with interactive options.
@@ -77,6 +80,7 @@
 
 ### 🛠️ util/
 - **ColorUtil.java** – Provides color formatting utilities for text output based on cat color traits.
+- **MusicUtil.java** - Provides the audio visual used in the background musics in the game and the sound effects used.
 - **TextUtil.java** – Offers text display utilities like typewriter effects, centered printing, and screen clearing.
 
 
@@ -149,17 +153,21 @@ java -cp src core.Main
 #### Inheritance is used in the overall structure of the combat and entity system. Classes such as Player and Enemy extend a common base entity class and share attributes such as health points, attack lists, and names. This allows shared behavior while still supporting unique features for different entity types. This setup also makes the project ready for expansion, since new types of enemies or special player subclasses can easily inherit from the base class.
 
 # **⋆🐾° ┊Game Play (Example Output)**
-## baguhin, ung may tower nalang and ung panimula na kwento
-<img src="resources/image.png">
+<img src="resources/MainMenu.png">
+
+## Introduction for the game
+<img src="resources/Intro.jpg">
+
 
 ## 🎨🖌️ Character Creation
-<img src="resources/image-1.png">
+<img src="resources/CharSelect.png">
 
 ## 📊 Status of your character
-<img src="resources/image-2.png">
+<img src="resources/CharStats.png">
 
 ## 🫀⚔️ 💀 Battle between LIFE and DEATH
-<img src="resources/image-3.png">
+<img src="resources/EnemySample.jpg">
+<img src="resources/YourTurn.jpg">
 
 
 # **⋆🐾° ┊Development team (MEO\V3X)**
