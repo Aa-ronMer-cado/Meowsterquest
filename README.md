@@ -108,7 +108,11 @@ java core.Main
 ```
 #### Make sure you're in the same directory where the compiled `.class` files are located, or set the classpath explicitly:
 ```
-java -cp src core.Main 
+C:\Program Files\Eclipse Adoptium\jdk-25.0.0.36-hotspot\bin\java.exe" `
+--enable-preview `
+-XX:+ShowCodeDetailsInExceptionMessages `
+-cp "c:\Users\Acer\Documents\GitHub\Meowsterquest\bin" `
+core.Main
 ```
 
 ### **What can YOU do (Features)**
@@ -194,7 +198,6 @@ java -cp src core.Main
 - **Family** for providing unwavering support and motivation that kept us focused and determined.
 
 # **⋆🐾° ┊ References**
-V
 <div align= "center"><img src= "resources/CatFam.png" width = "400" height="300"></div>
 <h3 align = "center">
   🢁 Mikyla's cat References 🢁
