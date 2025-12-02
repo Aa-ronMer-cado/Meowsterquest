@@ -41,9 +41,8 @@
     |   └── 🎮 Player.java
     └── 👿 Enemy.java
     └── 🔊 NPC.java
-        └── 👿 Enemy.java
-        └── 🔊 NPC.java
 └── 📂 resources/
+    └── textprint
 └── 📂 system/
      └── 🐱 Characters.java
      └── 📋 Menu.java
@@ -195,7 +194,7 @@ java -cp src core.Main
 - **Family** for providing unwavering support and motivation that kept us focused and determined.
 
 # **⋆🐾° ┊ References**
-
+V
 <div align= "center"><img src= "resources/CatFam.png" width = "400" height="300"></div>
 <h3 align = "center">
   🢁 Mikyla's cat References 🢁

@@ -82,9 +82,6 @@ public static void typewriterPrint(String text, int delayMs, MusicUtil musicUtil
     musicUtil.stopTypingSFX();
 }
 
-// =========================
-// CENTERED (WITH SOUND)
-// =========================
 public static void typewriterPrintCentered(String text, int delayMs, int width, MusicUtil musicUtil) {
     int padding = Math.max(0, (width - text.length()) / 2);
 
@@ -100,30 +97,29 @@ public static void typewriterPrintCentered(String text, int delayMs, int width, 
     musicUtil.stopTypingSFX();
 }
 
-// MISSING OVERLOAD (NOW FIXED)
 public static void typewriterPrintCentered(String text, MusicUtil musicUtil) {
     typewriterPrintCentered(text, 50, DEFAULT_WIDTH, musicUtil);
 }
-public static void typewriterPrintCenteredWithBorder(String text, int delayMs, int width, MusicUtil musicUtil) {
-    String border = "=".repeat(width);
-    int padding = Math.max(0, (width - text.length()) / 2);
+    public static void typewriterPrintCenteredWithBorder(String text, int delayMs, int width, MusicUtil musicUtil) {
+        String border = "=".repeat(width);
+        int padding = Math.max(0, (width - text.length()) / 2);
 
-    System.out.println(border);
-    musicUtil.startTypingSFX(TYPING_SFX_PATH);
+        System.out.println(border);
+        musicUtil.startTypingSFX(TYPING_SFX_PATH);
 
-    System.out.print(" ".repeat(padding));
-    for (char c : text.toCharArray()) {
-        System.out.print(c);
-        sleep(delayMs);
+        System.out.print(" ".repeat(padding));
+        for (char c : text.toCharArray()) {
+            System.out.print(c);
+            sleep(delayMs);
+        }
+
+        System.out.println();
+        musicUtil.stopTypingSFX();
+        System.out.println(border);
     }
 
-    System.out.println();
-    musicUtil.stopTypingSFX();
-    System.out.println(border);
-}
-
-public static void typewriterPrintCenteredWithBorder(String text, MusicUtil musicUtil) {
-    typewriterPrintCenteredWithBorder(text, 40, DEFAULT_WIDTH, musicUtil);
+    public static void typewriterPrintCenteredWithBorder(String text, MusicUtil musicUtil) {
+            typewriterPrintCenteredWithBorder(text, 40, DEFAULT_WIDTH, musicUtil);
 }
 
     /* ==========================================================
