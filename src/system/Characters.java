@@ -83,6 +83,7 @@ public class Characters {
         TextUtil.typewriterPrintCentered("With courage burning bright, " + playerName + " journeys to Asonia", 50, 160, music);
         TextUtil.typewriterPrintCentered("to reclaim Pawshire's freedom.", 50, 160 ,music);
         System.out.println("=".repeat(157));
+        TextUtil.printTextFile("src/resource/textprint/Asonia.txt");
         TextUtil.pause(2000);
     }
 }

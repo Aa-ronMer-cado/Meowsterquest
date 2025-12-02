@@ -39,24 +39,7 @@ public class Menu {
         }
         System.out.println();
 
-        TextUtil.printMiddle("""
-                                                |>>>
-                                                |
-                                            _  _|_  _        
-                                           |;|_|;|_|;|
-                                           \\.    .  /
-                                            \\:  .  /
-                                             ||:   |
-                                             ||:.  |
-                                             ||:  .|
-                                             ||:   |       \\,//
-                                             ||: , |            //`\\
-                                             ||:   |
-                                             ||: . |
-              __                            _||_   |
-     ____--`~    '--~~__            __ ----~    ~`---,              ___
--~--~                   ~---__ ,--~'                  ~~----_____-~'   `~----~~
-            """, 100);
+        TextUtil.printTextFile("src/resource/textprint/TowerIntro.txt");
     }
 
     public void showVictorySequence(String playerName) {
@@ -66,6 +49,8 @@ public class Menu {
 
         TextUtil.typewriterPrintCentered("Pawshire is restored! Calm returns to the land...", music);
         System.out.println();
+        TextUtil.printTextFile("src/resource/textprint/TowerVictory.txt");
+        TextUtil.clearScreen();
         TextUtil.pause(1500);
 
         TextUtil.typewriterPrintCentered("The citizens cheer for " + playerName + "!", music);
@@ -77,7 +62,10 @@ public class Menu {
         TextUtil.pause(1000);
 
         TextUtil.typewriterBlip("[Prisoner]: \"Pawshire will never forget your courage and sacrifice.\"", 100, music);
-        TextUtil.pause(700);
+        TextUtil.clearScreen();
+        TextUtil.printTextFile("src/resource/textprint/Medal.txt");
+        TextUtil.clearScreen();
+        TextUtil.pause(1000);
 
         System.out.println();
         TextUtil.typewriterPrintCentered("Prisoners reunite!", music);

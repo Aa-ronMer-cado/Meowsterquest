@@ -20,7 +20,8 @@ public class BattleSystem {
 
     public boolean startBattle() {
         TextUtil.clearScreen();
-        TextUtil.typewriterPrintCentered("\n--- BATTLE START! ---\n", music);
+        TextUtil.typewriterPrintCentered("--- BATTLE START! ---", music);
+        TextUtil.clearScreen();
         enemy.displayStats();
         TextUtil.pause(2000);
         System.out.println("\n");
@@ -94,10 +95,11 @@ public class BattleSystem {
     private void enemyTurn() {
         TextUtil.clearScreen();
         TextUtil.typewriterBlipCentered("---ENEMY TURN---",100, music);
+        TextUtil.pause(500);
 
         int dmg = enemy.performAction();
         TextUtil.pause(800);
         if (dmg > 0) player.takeDamage(dmg);
-        TextUtil.pause(1200);
+        TextUtil.pause(400);
     }
 }
