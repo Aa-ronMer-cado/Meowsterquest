@@ -42,7 +42,7 @@
     └── 👿 Enemy.java
     └── 🔊 NPC.java
 └── 📂 resources/
-    └── textprint
+    └── 📂textprint/
 └── 📂 system/
      └── 🐱 Characters.java
      └── 📋 Menu.java
@@ -71,7 +71,8 @@
 - **`Enemy.java`** – Represents enemy characters with stats, ASCII art, and combat behavior.
 - **`NPC.java`** – Models non-playable characters with names, roles, and dialogue interactions.
 
-### ⚙️ resources/
+### 📚 resources/ - Where all the music file needed in the program were stored.
+ &nbsp;&nbsp;&nbsp;&nbsp; 💬 textprint/ - This is where all the ASCII characters or visuals were stored.
 ### ⚙️ system/
 - **`Character.java`** – Handles character creation, breed and color selection, and NPC encounter scenes.
 - **`Menu.java`** – Displays game menus, introduction, victory, and end screens with interactive options.
@@ -156,19 +157,21 @@ core.Main
 #### Inheritance is used in the overall structure of the combat and entity system. Classes such as Player and Enemy extend a common base entity class and share attributes such as health points, attack lists, and names. This allows shared behavior while still supporting unique features for different entity types. This setup also makes the project ready for expansion, since new types of enemies or special player subclasses can easily inherit from the base class.
 
 # **⋆🐾° ┊Game Play (Example Output)**
+
+## /•᷅‎‎•᷄\੭┊ Main Menu 
 <img src="resources/MainMenu.png">
 
-## Introduction for the game
+## /•᷅‎‎•᷄\੭┊ Introduction for the game
 <img src="resources/Intro.jpg">
 
 
-## 🎨🖌️ Character Creation
+## /•᷅‎‎•᷄\੭┊ Character Creation
 <img src="resources/CharSelect.png">
 
-## 📊 Status of your character
+## /•᷅‎‎•᷄\੭┊ Status of your character
 <img src="resources/CharStats.png">
 
-## 🫀⚔️ 💀 Battle between LIFE and DEATH
+## /•᷅‎‎•᷄\੭┊ Battle in The Tower
 <img src="resources/EnemySample.jpg">
 <img src="resources/YourTurn.jpg">
 
