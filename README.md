@@ -71,8 +71,8 @@
 - **`Enemy.java`** – Represents enemy characters with stats, ASCII art, and combat behavior.
 - **`NPC.java`** – Models non-playable characters with names, roles, and dialogue interactions.
 
-### 📚 resources/ - Where all the music file needed in the program were stored.
- &nbsp;&nbsp;&nbsp;&nbsp; 💬 textprint/ - This is where all the ASCII characters or visuals were stored.
+### 📚 resources/ - Stores all ASCII art and music files used in the game.
+ &nbsp;&nbsp;&nbsp;&nbsp; 💬 textprint/ - Folder for ASCII art text files
 ### ⚙️ system/
 - **`Character.java`** – Handles character creation, breed and color selection, and NPC encounter scenes.
 - **`Menu.java`** – Displays game menus, introduction, victory, and end screens with interactive options.
@@ -99,7 +99,7 @@ cd path/to/MEOWSTERQUEST
 #### Assuming your source files are inside a `src` folder and follow a package structure (`core`, `combat`, etc.), compile all `.java` files:
 
 ```
-javac src/**/*.java
+javac -d bin src\core\Main.java
 ```
 **3. Run the main class** 
 
@@ -107,13 +107,9 @@ javac src/**/*.java
 ```
 java core.Main
 ```
-#### Make sure you're in the same directory where the compiled `.class` files are located, or set the classpath explicitly:
+#### Make sure the project is compiled. Then, run the program by pointing Java to the folder with compiled `.class` files:
 ```
-C:\Program Files\Eclipse Adoptium\jdk-25.0.0.36-hotspot\bin\java.exe" `
---enable-preview `
--XX:+ShowCodeDetailsInExceptionMessages `
--cp "c:\Users\Acer\Documents\GitHub\Meowsterquest\bin" `
-core.Main
+java -cp bin core.Main
 ```
 
 ### **What can YOU do (Features)**
@@ -145,13 +141,13 @@ core.Main
 # **⋆🐾° ┊ Object-Oriented Principles**
 
 ## 🌌 Abstraction
-#### Abstraction is applied through the use of helper classes that hide low-level `details.TextUtil.java` handles spacing, delays, centering, and dynamic printing, while `ColorUtil.java` manages ANSI color formatting. These classes allow the game logic to remain clean and easy to read, since higher-level methods like `printCentered()` or `orange()` hide the underlying implementation. The `NPC` class also provides abstraction through its `speak()` method, which manages the formatting and animation of dialogue internally.
+#### Abstraction is used heavily in classes like TextUtil and MusicUtil, where complex logic for typewriter effects, delays, and sound playback is hidden behind simple method calls such as typewriterPrintCentered or playSFX. This keeps Tower, BattleSystem, and other systems clean and focused on game logic because they don’t need to know how text rendering or audio handling works internally.
 
 ## 💊 Encapsulation
 #### Encapsulation appears in classes where important variables like player health, enemy stats, sound file paths, and text settings are kept private and are accessed or modified only through methods. This protects game data from accidental misuse, ensures values stay valid, and keeps all changes controlled inside the class itself, making the code safer and more reliable.
 
 ## 🦋 Polymorphism
-#### Polymorphism is present in interactions with entities. `Player` and `Enemy` objects share the same base type, allowing the program to call common methods while still reacting differently depending on which object is being used. Attack objects are another form of polymorphism. They follow the same structure but have different stats and effects, enabling the combat system to work with them in a flexible and dynamic way.
+#### Polymorphism is used when the battle system interacts with enemies through the Enemy type while allowing each enemy subclass to override methods like attack, speak, or special moves. This lets the battle system call the same method on different enemy types but get different behaviors depending on the actual object, which makes combat system flexible and easy to expand with new enemies.
 
 ## 🧬 Inheritance
 #### Inheritance is used in the overall structure of the combat and entity system. Classes such as Player and Enemy extend a common base entity class and share attributes such as health points, attack lists, and names. This allows shared behavior while still supporting unique features for different entity types. This setup also makes the project ready for expansion, since new types of enemies or special player subclasses can easily inherit from the base class.
